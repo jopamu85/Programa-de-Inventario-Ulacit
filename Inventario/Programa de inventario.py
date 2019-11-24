@@ -1,4 +1,7 @@
-
+producto = []
+cantidad = []
+precio = []
+total = []
 def menu():
     bandera = False
     num = 0
@@ -32,10 +35,6 @@ while not salir:
     if opcion == 1:
         cantprod = ingresarCant("Ingrese la cantidad de productos a procesar ")
         cont = 1
-        producto = []
-        cantidad = []
-        precio = []
-        total = []
         while cantprod >= cont:
             nomprod = ingresarNombre("Ingrese el nombre del producto ")
             producto.append(nomprod)
