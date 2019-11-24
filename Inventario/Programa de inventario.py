@@ -46,7 +46,10 @@ while not salir:
             totalprod = multiplicacion(var1, var2)
             total.append(totalprod)
             cont += 1
-        print(producto, cantidad, precio, total)
+        ind = 1
+        for productos in producto:
+            print("Producto:", productos, ". Cantidad:", cantidad[ind], ". Precio:",precio[ind], ". Total: ",total[ind])
+            ind += 0
 
     elif opcion == 2:
         print("Opcion 2")
