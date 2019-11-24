@@ -13,13 +13,30 @@ def menu():
             print("Valor ingresado invalido, ingrese un digito ")
     return num
 def ingresarCant(mensaje):
-    dato = int(input(mensaje))
+    bandera = False
+    while not bandera:
+        try:
+            dato = int(input(mensaje))
+            bandera = True
+        except ValueError:
+            print("Valor ingresado no esta correcto, intente de nuevo")
     return dato
 def ingresarNombre(mensaje):
     nombre = input(mensaje)
     return nombre
 def multiplicacion(var1,var2):
     return var1 * var2
+def busqueda(mensaje):
+    bandera1 = False
+    while not bandera1:
+        try:
+            elemenbus= producto.index(input(mensaje))
+            bandera1 = True
+        except ValueError:
+            print("El producto ingresado no se encuentra en la lista, verifique el producto en inventario e intente de nuevo")
+    return elemenbus
+def resta(var1, var2):
+    return var1 - var2
 
 salir = False
 while not salir:
@@ -45,13 +62,26 @@ while not salir:
             totalprod = multiplicacion(var1, var2)
             total.append(totalprod)
             cont += 1
-        ind = 1
+        ind = 0
         for productos in producto:
             print("Producto:", productos, ". Cantidad:", cantidad[ind], ". Precio:",precio[ind], ". Total: ",total[ind])
-            ind += 0
+            ind += 1
 
     elif opcion == 2:
-        print("Opcion 2")
+        retprod = busqueda("Ingrese el nombre del producto a retirar ")
+        retcant = ingresarCant("Cuantos productos desea retirar? ")
+        var1 = cantidad[retprod]
+        var2 = retcant
+        resresta = resta(var1, var2)
+        cantidad[retprod] = resresta
+        nuevprecio = precio[retprod]*resresta
+        total[retprod] = nuevprecio
+        ind = 0
+        for productos in producto:
+            print("Producto:", productos, ". Cantidad:", cantidad[ind], ". Precio:", precio[ind], ". Total: ",
+                  total[ind])
+            ind += 1
+
     elif opcion == 3:
         print("Opcion 3")
     elif opcion == 4:
