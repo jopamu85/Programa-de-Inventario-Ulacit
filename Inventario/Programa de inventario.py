@@ -50,6 +50,7 @@ while not salir:
     print("Elija una opcion ")
     opcion = menu()
     if opcion == 1:
+        print("Ingreso de inventario")
         cantprod = ingresarCant("Ingrese la cantidad de productos a procesar ")
         cont = 1
         while cantprod >= cont:
@@ -76,6 +77,7 @@ while not salir:
 
 
     elif opcion == 2:
+        print("Salida de inventario")
         retprod = busqueda("Ingrese el nombre del producto a retirar ")
         retcant = ingresarCant("Cuantos productos desea retirar? ")
         var1 = cantidad[retprod]
@@ -93,6 +95,7 @@ while not salir:
     elif opcion == 3:
         salir2 = False
         while not salir2:
+            print("Menu de edicion de inventario")
             print("Indique el valor que desea editar")
             print("1. Nombre")
             print("2. Cantidad")
@@ -103,16 +106,16 @@ while not salir:
             opcion2 = menu()
 
             if opcion2 == 1:
-                editprod = busqueda("Indique cual producto desea editar")
-                edicnombre = ingresarNombre("Indique el nuevo nombre")
+                editprod = busqueda("Indique cual producto desea editar ")
+                edicnombre = ingresarNombre("Indique el nuevo nombre ")
                 producto[editprod] = edicnombre
                 ind = 0
                 for productos in producto:
                     print("Producto:", productos, ". Cantidad:", cantidad[ind], ". Precio:", precio[ind], ". Total: ",total[ind])
                     ind += 1
             elif opcion2 == 2:
-                editprod = busqueda("Indique cual producto desea editar")
-                ediccant = ingresarCant("Indique la nueva cantidad")
+                editprod = busqueda("Indique cual producto desea editar ")
+                ediccant = ingresarCant("Indique la nueva cantidad ")
                 cantidad[editprod] = ediccant
                 nuevtotal = cantidad[editprod] * precio[editprod]
                 total[editprod] = nuevtotal
@@ -121,8 +124,8 @@ while not salir:
                     print("Producto:", productos, ". Cantidad:", cantidad[ind], ". Precio:", precio[ind], ". Total: ",total[ind])
                     ind += 1
             elif opcion2 == 3:
-                editprod = busqueda("Indique cual producto desea editar")
-                edicprec = ingresarCant("Indique el nuevo precio")
+                editprod = busqueda("Indique cual producto desea editar ")
+                edicprec = ingresarCant("Indique el nuevo precio ")
                 precio[editprod] = edicprec
                 nuevtotal = cantidad[editprod] * precio[editprod]
                 total[editprod] = nuevtotal
@@ -136,9 +139,30 @@ while not salir:
                 print("Introduzca un valor entre 1 y 4")
 
     elif opcion == 4:
-        print("Opcion 4")
+        salir3 = False
+        while not salir3:
+            print("Menu de listado / busqueda de inventario")
+            print("Indique la funcion que desea seleccionar")
+            print("1. Busqueda de producto en inventario")
+            print("2. Listado de inventario")
+            print("3. Salir de listado / busqueda de inventario")
+
+            print("Seleccione una opcion")
+            opcion3 = menu()
+            if opcion3 == 1:
+                opbusqueda = busqueda("Ingrese el nombre del producto a buscar ")
+                print("Producto:", producto[opbusqueda], ". Cantidad", cantidad[opbusqueda], ". Precio unitario", precio[opbusqueda], ". Total", total[opbusqueda])
+            elif opcion3 ==2:
+                ind = 0
+                for productos in producto:
+                    print("Producto:", productos, ". Cantidad:", cantidad[ind], ". Precio:", precio[ind], ". Total: ",total[ind])
+                    ind += 1
+            elif opcion3 == 3:
+                salir3 = True
+            else:
+                print("Introduzca un valor entre 1 y 3")
     elif opcion == 5:
         salir= True
     else:
         print("Introduzca un valor entre 1 y 5")
-print("Fin")
+print("Gracias por utilizar el programa de inventario")
