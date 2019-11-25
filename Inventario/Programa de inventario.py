@@ -41,6 +41,7 @@ def resta(var1, var2):
 salir = False
 while not salir:
     print("Bienvenido(a) al sistema de inventario")
+    print("Creado por Jose Pablo Muñoz, Emanuel Blanco y Laura Vargas")
     print("1. Ingresar inventario")
     print("2. Sacar de inventario")
     print("3. Editar inventario")
