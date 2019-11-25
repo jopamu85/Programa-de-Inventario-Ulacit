@@ -48,24 +48,32 @@ while not salir:
     print("5. Salir")
 
     print("Elija una opcion ")
-    opcion= menu()
+    opcion = menu()
     if opcion == 1:
         cantprod = ingresarCant("Ingrese la cantidad de productos a procesar ")
         cont = 1
         while cantprod >= cont:
             nomprod = ingresarNombre("Ingrese el nombre del producto ")
-            producto.append(nomprod)
-            var1 = ingresarCant("Ingrese la cantidad de productos a ingresar ")
-            cantidad.append(var1)
-            var2 = ingresarCant("Ingrese el precio unitario ")
-            precio.append(var2)
-            totalprod = multiplicacion(var1, var2)
-            total.append(totalprod)
-            cont += 1
-        ind = 0
+            if nomprod not in producto:
+                producto.append(nomprod)
+                var1 = ingresarCant("Ingrese la cantidad de productos a ingresar ")
+                cantidad.append(var1)
+                var2 = ingresarCant("Ingrese el precio unitario ")
+                precio.append(var2)
+                totalprod = multiplicacion(var1, var2)
+                total.append(totalprod)
+            else:
+                prodagre = producto.index(nomprod)
+                cantagre = cantidad[prodagre] + ingresarCant("Ingrese la cantidad a adicionar")
+                cantidad[prodagre] = cantagre
+                totalprod = cantagre * precio[prodagre]
+                total[prodagre] = totalprod
+            cont +=1
+            ind = 0
         for productos in producto:
             print("Producto:", productos, ". Cantidad:", cantidad[ind], ". Precio:",precio[ind], ". Total: ",total[ind])
             ind += 1
+
 
     elif opcion == 2:
         retprod = busqueda("Ingrese el nombre del producto a retirar ")
@@ -83,7 +91,50 @@ while not salir:
             ind += 1
 
     elif opcion == 3:
-        print("Opcion 3")
+        salir2 = False
+        while not salir2:
+            print("Indique el valor que desea editar")
+            print("1. Nombre")
+            print("2. Cantidad")
+            print("3. Precio unitario")
+            print("4. Salir Edicion de productos")
+
+            print("Elija una opcion ")
+            opcion2 = menu()
+
+            if opcion2 == 1:
+                editprod = busqueda("Indique cual producto desea editar")
+                edicnombre = ingresarNombre("Indique el nuevo nombre")
+                producto[editprod] = edicnombre
+                ind = 0
+                for productos in producto:
+                    print("Producto:", productos, ". Cantidad:", cantidad[ind], ". Precio:", precio[ind], ". Total: ",total[ind])
+                    ind += 1
+            elif opcion2 == 2:
+                editprod = busqueda("Indique cual producto desea editar")
+                ediccant = ingresarCant("Indique la nueva cantidad")
+                cantidad[editprod] = ediccant
+                nuevtotal = cantidad[editprod] * precio[editprod]
+                total[editprod] = nuevtotal
+                ind = 0
+                for productos in producto:
+                    print("Producto:", productos, ". Cantidad:", cantidad[ind], ". Precio:", precio[ind], ". Total: ",total[ind])
+                    ind += 1
+            elif opcion2 == 3:
+                editprod = busqueda("Indique cual producto desea editar")
+                edicprec = ingresarCant("Indique el nuevo precio")
+                precio[editprod] = edicprec
+                nuevtotal = cantidad[editprod] * precio[editprod]
+                total[editprod] = nuevtotal
+                ind = 0
+                for productos in producto:
+                    print("Producto:", productos, ". Cantidad:", cantidad[ind], ". Precio:", precio[ind], ". Total: ",total[ind])
+                    ind += 1
+            elif opcion2 == 4:
+                salir2 = True
+            else:
+                print("Introduzca un valor entre 1 y 4")
+
     elif opcion == 4:
         print("Opcion 4")
     elif opcion == 5:
