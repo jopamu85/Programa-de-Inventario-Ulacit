@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0a9628a-aa3a-4ded-be1a-0afe9474d68d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Programa de inventario.py" beforeDir="false" afterPath="$PROJECT_DIR$/Programa de inventario.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventario.csv" beforeDir="false" afterPath="$PROJECT_DIR$/inventario.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576220717615</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Programa finalizado">
+      <created>1576226476270</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576226476270</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -105,33 +110,34 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Cambios en la escritura del CSV por medio de Pandas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambios en la escritura del CSV por medio de Pandas" />
+    <MESSAGE value="Programa finalizado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Programa finalizado" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576218126092">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1440.0.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1576218126092" />
-    <state x="386" y="119" key="CommitChangelistDialog2" timestamp="1576220716854">
+    <state x="386" y="119" key="CommitChangelistDialog2" timestamp="1576226475542">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="386" y="119" key="CommitChangelistDialog2/-1440.0.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1576220716854" />
-    <state width="1899" height="283" key="GridCell.Tab.0.bottom" timestamp="1576226358604">
+    <state x="386" y="119" key="CommitChangelistDialog2/-1440.0.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1576226475542" />
+    <state width="1899" height="283" key="GridCell.Tab.0.bottom" timestamp="1576226848569">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="283" key="GridCell.Tab.0.bottom/-1440.0.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1576226358604" />
-    <state width="1899" height="283" key="GridCell.Tab.0.center" timestamp="1576226358604">
+    <state width="1899" height="283" key="GridCell.Tab.0.bottom/-1440.0.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1576226848569" />
+    <state width="1899" height="283" key="GridCell.Tab.0.center" timestamp="1576226848569">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="283" key="GridCell.Tab.0.center/-1440.0.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1576226358604" />
-    <state width="1899" height="283" key="GridCell.Tab.0.left" timestamp="1576226358604">
+    <state width="1899" height="283" key="GridCell.Tab.0.center/-1440.0.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1576226848569" />
+    <state width="1899" height="283" key="GridCell.Tab.0.left" timestamp="1576226848569">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="283" key="GridCell.Tab.0.left/-1440.0.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1576226358604" />
-    <state width="1899" height="283" key="GridCell.Tab.0.right" timestamp="1576226358604">
+    <state width="1899" height="283" key="GridCell.Tab.0.left/-1440.0.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1576226848569" />
+    <state width="1899" height="283" key="GridCell.Tab.0.right" timestamp="1576226848569">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="283" key="GridCell.Tab.0.right/-1440.0.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1576226358604" />
+    <state width="1899" height="283" key="GridCell.Tab.0.right/-1440.0.1440.870/0.0.1920.1050@0.0.1920.1050" timestamp="1576226848569" />
     <state x="461" y="167" key="SettingsEditor" timestamp="1576208128895">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

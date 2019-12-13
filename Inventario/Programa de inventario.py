@@ -54,12 +54,15 @@ salir = False
 while not salir:
     print("Bienvenido(a) al sistema de inventario")
     print("Creado por Jose Pablo Muñoz, Emanuel Blanco y Laura Vargas")
+    print("")
+    print("")
     print("1. Ingresar inventario")
     print("2. Sacar de inventario")
     print("3. Editar inventario")
     print("4. Listado de inventario/ Busqueda")
     print("5. Salir")
-
+    print("")
+    print("")
     print("Elija una opcion ")
     opcion = menu()
     if opcion == 1:
@@ -84,8 +87,11 @@ while not salir:
                 total[prodagre] = totalprod
             cont +=1
             ind = 0
+        print("")
+        print("")
         print(pd.DataFrame(inventario))
-
+        print("")
+        print("")
     elif opcion == 2:
         print("Salida de inventario")
         retprod = busqueda("Ingrese el nombre del producto a retirar ")
@@ -97,17 +103,25 @@ while not salir:
         nuevprecio = precio[retprod]*resresta
         total[retprod] = nuevprecio
         ind = 0
+        print("")
+        print("")
         print(pd.DataFrame(inventario))
+        print("")
+        print("")
 
     elif opcion == 3:
         salir2 = False
         while not salir2:
             print("Menu de edicion de inventario")
+            print("")
+            print("")
             print("Indique el valor que desea editar")
             print("1. Nombre")
             print("2. Cantidad")
             print("3. Precio unitario")
             print("4. Salir Edicion de productos")
+            print("")
+            print("")
 
             print("Elija una opcion ")
             opcion2 = menu()
@@ -117,7 +131,11 @@ while not salir:
                 edicnombre = ingresarNombre("Indique el nuevo nombre ")
                 producto[editprod] = edicnombre
                 ind = 0
+                print("")
+                print("")
                 print(pd.DataFrame(inventario))
+                print("")
+                print("")
             elif opcion2 == 2:
                 editprod = busqueda("Indique cual producto desea editar ")
                 ediccant = ingresarCant("Indique la nueva cantidad ")
@@ -125,7 +143,11 @@ while not salir:
                 nuevtotal = cantidad[editprod] * precio[editprod]
                 total[editprod] = nuevtotal
                 ind = 0
+                print("")
+                print("")
                 print(pd.DataFrame(inventario))
+                print("")
+                print("")
             elif opcion2 == 3:
                 editprod = busqueda("Indique cual producto desea editar ")
                 edicprec = ingresarCant("Indique el nuevo precio ")
@@ -133,7 +155,11 @@ while not salir:
                 nuevtotal = cantidad[editprod] * precio[editprod]
                 total[editprod] = nuevtotal
                 ind = 0
+                print("")
+                print("")
                 print(pd.DataFrame(inventario))
+                print("")
+                print("")
             elif opcion2 == 4:
                 salir2 = True
             else:
@@ -143,19 +169,30 @@ while not salir:
         salir3 = False
         while not salir3:
             print("Menu de listado / busqueda de inventario")
+            print("")
+            print("")
             print("Indique la funcion que desea seleccionar")
             print("1. Busqueda de producto en inventario")
             print("2. Listado de inventario")
             print("3. Salir de listado / busqueda de inventario")
-
+            print("")
+            print("")
             print("Seleccione una opcion")
             opcion3 = menu()
             if opcion3 == 1:
                 opbusqueda = busqueda("Ingrese el nombre del producto a buscar ")
+                print("")
+                print("")
                 print("Producto:", producto[opbusqueda], ". Cantidad", cantidad[opbusqueda], ". Precio unitario", precio[opbusqueda], ". Total", total[opbusqueda])
+                print("")
+                print("")
             elif opcion3 ==2:
                 ind = 0
+                print("")
+                print("")
                 print(pd.DataFrame(inventario))
+                print("")
+                print("")
             elif opcion3 == 3:
                 salir3 = True
             else:
