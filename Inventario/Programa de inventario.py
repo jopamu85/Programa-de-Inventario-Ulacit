@@ -1,7 +1,17 @@
+import pandas as pd
+import numpy as np
+import csv
+
+
+
 producto = []
 cantidad = []
 precio = []
 total = []
+inventario = {"Producto": producto, "Cantidad": cantidad, "Precio": precio, "Total": total}
+
+
+
 def menu():
     bandera = False
     num = 0
@@ -72,10 +82,7 @@ while not salir:
                 total[prodagre] = totalprod
             cont +=1
             ind = 0
-        for productos in producto:
-            print("Producto:", productos, ". Cantidad:", cantidad[ind], ". Precio:",precio[ind], ". Total: ",total[ind])
-            ind += 1
-
+        print(pd.DataFrame(inventario))
 
     elif opcion == 2:
         print("Salida de inventario")
@@ -88,10 +95,7 @@ while not salir:
         nuevprecio = precio[retprod]*resresta
         total[retprod] = nuevprecio
         ind = 0
-        for productos in producto:
-            print("Producto:", productos, ". Cantidad:", cantidad[ind], ". Precio:", precio[ind], ". Total: ",
-                  total[ind])
-            ind += 1
+        print(pd.DataFrame(inventario))
 
     elif opcion == 3:
         salir2 = False
@@ -111,9 +115,7 @@ while not salir:
                 edicnombre = ingresarNombre("Indique el nuevo nombre ")
                 producto[editprod] = edicnombre
                 ind = 0
-                for productos in producto:
-                    print("Producto:", productos, ". Cantidad:", cantidad[ind], ". Precio:", precio[ind], ". Total: ",total[ind])
-                    ind += 1
+                print(pd.DataFrame(inventario))
             elif opcion2 == 2:
                 editprod = busqueda("Indique cual producto desea editar ")
                 ediccant = ingresarCant("Indique la nueva cantidad ")
@@ -121,9 +123,7 @@ while not salir:
                 nuevtotal = cantidad[editprod] * precio[editprod]
                 total[editprod] = nuevtotal
                 ind = 0
-                for productos in producto:
-                    print("Producto:", productos, ". Cantidad:", cantidad[ind], ". Precio:", precio[ind], ". Total: ",total[ind])
-                    ind += 1
+                print(pd.DataFrame(inventario))
             elif opcion2 == 3:
                 editprod = busqueda("Indique cual producto desea editar ")
                 edicprec = ingresarCant("Indique el nuevo precio ")
@@ -131,9 +131,7 @@ while not salir:
                 nuevtotal = cantidad[editprod] * precio[editprod]
                 total[editprod] = nuevtotal
                 ind = 0
-                for productos in producto:
-                    print("Producto:", productos, ". Cantidad:", cantidad[ind], ". Precio:", precio[ind], ". Total: ",total[ind])
-                    ind += 1
+                print(pd.DataFrame(inventario))
             elif opcion2 == 4:
                 salir2 = True
             else:
@@ -155,15 +153,16 @@ while not salir:
                 print("Producto:", producto[opbusqueda], ". Cantidad", cantidad[opbusqueda], ". Precio unitario", precio[opbusqueda], ". Total", total[opbusqueda])
             elif opcion3 ==2:
                 ind = 0
-                for productos in producto:
-                    print("Producto:", productos, ". Cantidad:", cantidad[ind], ". Precio:", precio[ind], ". Total: ",total[ind])
-                    ind += 1
+                print(pd.DataFrame(inventario))
             elif opcion3 == 3:
                 salir3 = True
             else:
                 print("Introduzca un valor entre 1 y 3")
     elif opcion == 5:
+        df = pd.DataFrame(inventario)
+        df.to_csv("inventario.csv")
         salir= True
     else:
         print("Introduzca un valor entre 1 y 5")
 print("Gracias por utilizar el programa de inventario")
+
