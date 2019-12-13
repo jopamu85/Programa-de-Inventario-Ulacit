@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0a9628a-aa3a-4ded-be1a-0afe9474d68d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Programa de inventario.py" beforeDir="false" afterPath="$PROJECT_DIR$/Programa de inventario.py" afterDir="false" />
-    </list>
+    <list default="true" id="f0a9628a-aa3a-4ded-be1a-0afe9474d68d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576226476270</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Cambios menores de formato">
+      <created>1576226899816</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1576226899816</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,7 +116,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Cambios en la escritura del CSV por medio de Pandas" />
     <MESSAGE value="Programa finalizado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Programa finalizado" />
+    <MESSAGE value="Cambios menores de formato" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios menores de formato" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576218126092">
