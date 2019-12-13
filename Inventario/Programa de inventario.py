@@ -2,15 +2,17 @@ import pandas as pd
 import numpy as np
 import csv
 
-
+df1= pd.read_csv("inventario.csv", header= 0, usecols=["Producto", "Cantidad", "Precio", "Total"])
 
 producto = []
 cantidad = []
 precio = []
 total = []
+producto = df1["Producto"].to_list()
+cantidad = df1["Cantidad"].to_list()
+precio = df1["Precio"].to_list()
+total = df1["Total"].to_list()
 inventario = {"Producto": producto, "Cantidad": cantidad, "Precio": precio, "Total": total}
-
-
 
 def menu():
     bandera = False
